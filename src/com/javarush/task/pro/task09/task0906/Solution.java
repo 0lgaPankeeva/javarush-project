@@ -21,12 +21,37 @@ public class Solution {
 
     public static String toBinary(int decimalNumber) {
         //напишите тут ваш код
+        if (decimalNumber <= 0) {
+            return "";
+        }
 
-        return null;
+        String binaryNumber = "";
+        while (decimalNumber != 0) {
+            binaryNumber = (decimalNumber % 2) + binaryNumber;
+            decimalNumber = decimalNumber / 2;
+
+        }
+        return binaryNumber;
     }
 
-    public static int toDecimal(String binaryNumber) {
-        //напишите тут ваш код
-        return 0;
+
+        public static int toDecimal (String binaryNumber){
+            //напишите тут ваш код
+            if (binaryNumber == null || binaryNumber.isEmpty()) {
+                return 0;
+
+        }
+            int decimalNumber = 0;
+            for (int i = 0; i < binaryNumber.length(); i++) {
+                // Извлекаем символ с конца строки (справа налево)
+                char bitChar = binaryNumber.charAt(binaryNumber.length() - 1 - i);
+
+                // Преобразуем символ в число (0 или 1)
+                int bit = Character.getNumericValue(bitChar);
+
+                // Вычисляем согласно формуле: десятичное число + бит * 2^i
+                decimalNumber = decimalNumber + (int) (bit * Math.pow(2, i));
+            }
+            return decimalNumber;
+        }
     }
-}
