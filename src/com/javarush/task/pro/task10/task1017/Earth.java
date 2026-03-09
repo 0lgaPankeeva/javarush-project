@@ -9,22 +9,12 @@ public class Earth {
 
     public static void main(String[] args) {
         //напишите тут ваш код
-        Earth Africa = new Earth();
-        Africa.area = 30;
+        Africa Africa = new Africa(30);
+        Antarctica Antarctica = new Antarctica(14);
+        Australia Australia = new Australia(7);
+        Eurasia Eurasia = new Eurasia(54);
+        NorthAmerica NorthAmerica = new NorthAmerica(24);
+        SouthAmerica SouthAmerica = new SouthAmerica(18);
 
-        Earth Antarctica = new Earth();
-        Antarctica.area = 14;
-
-        Earth Australia = new Earth();
-        Australia.area = 7;
-
-        Earth Eurasia = new Earth();
-        Eurasia.area = 54;
-
-        Earth NortAmerica = new Earth();
-        NortAmerica.area = 24;
-
-        Earth SouthAmerica = new Earth();
-        SouthAmerica.area = 18;
     }
 }
